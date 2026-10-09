@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ef">
+  <meta name="description" content="Encontre seu próximo clássico. Uma curadoria independente de tênis Jordan, lançamentos e streetwear.">
+  <title>QUADRA 23 — Seu próximo clássico</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">Curadoria independente · Envio para todo o Brasil · Atendimento de verdade</div>
+  <header>
+    <a class="brand" href="#inicio" aria-label="Quadra 23, início"><span class="brand-mark">Q</span>QUADRA 23</a>
+    <nav class="nav" id="mainNav" aria-label="Navegação principal">
+      <a href="#colecao">Coleção</a><a href="#categorias">Modelos</a><a href="#novidades">Novidades</a><a href="#faq">Ajuda</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" id="searchButton" aria-label="Ir para busca">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg>
+      </button>
+      <button class="icon-button" id="cartButton" aria-label="Abrir sacola">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l1 13H4L5 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg><span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="icon-button menu-button" id="menuButton" aria-label="Abrir menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+      </button>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <span class="eyebrow">A cultura começa nos pés · 01 / 04</span>
+        <h1>Seu próximo<br><em>clássico.</em></h1>
+        <p>Silhuetas que atravessam gerações. Descubra uma curadoria independente feita para quem vive a cultura sneaker.</p>
+        <a class="button" href="#colecao">Ver coleção <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=1300&q=85" alt="Tênis em destaque na campanha da coleção" fetchpriority="high">
+        <span class="hero-stamp">Feito para deixar marca</span>
+      </div>
+      <span class="hero-index">QUADRA 23 — SELEÇÃO 2026</span>
+    </section>
+    <div class="ticker" aria-label="Jordan 1, Jordan 4, Jordan 11 e mais">
+      <div class="ticker-track"><span>Jordan 1</span><span>Jordan 4</span><span>Jordan 11</span><span>Street culture</span><span>Jordan 1</span><span>Jordan 4</span><span>Jordan 11</span></div>
+    </div>
+    <section class="section" id="colecao">
+      <div class="section-head">
+        <div><span class="eyebrow">Escolhas da casa</span><h2>A curadoria</h2></div>
+        <a class="text-link" href="#colecao">Explorar seleção ↗</a>
+      </div>
+      <div class="filters" aria-label="Filtros de produtos">
+        <label class="visually-hidden" for="productSearch">Buscar modelos</label>
+        <input class="search-field" id="productSearch" type="search" placeholder="Buscar um modelo...">
+        <span class="filter-label">Filtrar por:</span>
+        <label class="visually-hidden" for="modelFilter">Modelo</label>
+        <select class="filter-select" id="modelFilter"><option value="">Todos os modelos</option><option>Air Jordan 1</option><option>Air Jordan 4</option><option>Air Jordan 11</option></select>
+        <label class="visually-hidden" for="sizeFilter">Tamanho</label>
+        <select class="filter-select" id="sizeFilter"><option value="">Todos os tamanhos</option><option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option><option>44</option></select>
+        <label class="visually-hidden" for="priceFilter">Faixa de preço</label>
+        <select class="filter-select" id="priceFilter"><option value="">Qualquer preço</option><option value="1500">Até R$ 1.500</option><option value="2000">Até R$ 2.000</option></select>
+        <label class="visually-hidden" for="sortFilter">Ordenar por</label>
+        <select class="filter-select" id="sortFilter"><option value="featured">Em destaque</option><option value="newest">Novidades</option><option value="low">Menor preço</option><option value="high">Maior preço</option></select>
+      </div>
+      <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      <p id="noResults" style="display:none;font-size:12px;color:#77756f;padding:20px 0">Nenhum modelo encontrado. Tente alterar os filtros.</p>
+    </section>
+    <section class="section" id="categorias" style="padding-top:22px">
+      <div class="section-head">
+        <div><span class="eyebrow">Escolha sua silhueta</span><h2>Ícones do jogo</h2></div>
+      </div>
+      <div class="category-row">
+        <a href="#colecao" class="category-card" data-category="Air Jordan 1"><img loading="lazy" src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=700&q=80" alt="Tênis esportivo da categoria Jordan 1"><div class="category-caption"><span>O original</span><h3>Jordan 1</h3></div></a>
+        <a href="#colecao" class="category-card" data-category="Air Jordan 4"><img loading="lazy" src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=700&q=80" alt="Tênis esportivo da categoria Jordan 4"><div class="category-caption"><span>Uma nova era</span><h3>Jordan 4</h3></div></a>
+        <a href="#colecao" class="category-card" data-category="Air Jordan 11"><img loading="lazy" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80" alt="Tênis esportivo da categoria Jordan 11"><div class="category-caption"><span>Elegância em quadra</span><h3>Jordan 11</h3></div></a>
+        <a href="#colecao" class="category-card" data-category=""><img loading="lazy" src="https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=700&q=80" alt="Tênis de estilo urbano"><div class="category-caption"><span>Mais para descobrir</span><h3>Ver tudo</h3></div></a>
+      </div>
+    </section>
+    <section class="feature-band" id="novidades">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=1100&q=85" alt="Detalhe de tênis com estilo urbano">
+      <div class="feature-copy">
+        <span class="eyebrow">Não é só um tênis</span>
+        <h2>É a história<br>que você<br>vai contar.</h2>
+        <p>Do hardwood às ruas, cada silhueta carrega uma história própria. Encontre o par que tem a sua cara.</p>
+        <a href="#colecao" class="button dark">Descubra a seleção</a>
+      </div>
+    </section>
+    <section class="service-strip" aria-label="Informações de atendimento">
+      <div class="service"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h11v11H3zM14 11h4l3 3v4h-7z"/><circle cx="7.5" cy="19" r="1.7"/><circle cx="17.5" cy="19" r="1.7"/></svg><div><strong>Envio para todo o Brasil</strong><span>Consulte prazos e valores no carrinho</span></div></div>
+      <div class="service"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/><path d="m9 12 2 2 4-4"/></svg><div><strong>Compra com transparência</strong><span>Informações claras em cada etapa</span></div></div>
+      <div class="service"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v12H8l-4 3z"/><path d="M8 9h8M8 13h5"/></svg><div><strong>Tem alguma dúvida?</strong><span><a href="#faq">Veja respostas rápidas</a></span></div></div>
+    </section>
+    <section class="section faq-section" id="faq">
+      <div class="section-head"><div><span class="eyebrow">Estamos por aqui</span><h2>Ajuda sem enrolação</h2></div></div>
+      <div class="faq-grid">
+        <details><summary>Como funciona o prazo de envio?</summary><p>Os prazos e valores de entrega são demonstrativos nesta vitrine. Consulte as condições reais com a loja antes de concluir uma compra.</p></details>
+        <details><summary>Posso trocar ou devolver meu pedido?</summary><p>Consulte a política de trocas e devoluções da loja antes de comprar. As regras e prazos devem ser informados pela loja de acordo com a legislação vigente.</p></details>
+        <details><summary>Como escolher meu tamanho?</summary><p>Consulte o guia de medidas disponível na página de cada produto. O ajuste pode variar conforme o modelo.</p></details>
+        <details><summary>A loja é oficial da Jordan ou da Nike?</summary><p>Não. A QUADRA 23 é uma vitrine independente e não declara vínculo ou afiliação com a Jordan Brand, Nike ou qualquer outra marca.</p></details>
+        <details><summary>Os preços e produtos estão disponíveis para compra?</summary><p>Esta é uma demonstração visual. Produtos, preços, tamanhos, frete e disponibilidade são exemplos e precisam ser confirmados diretamente pela loja.</p></details>
+        <details><summary>Como entro em contato?</summary><p>Envie uma mensagem para contato@quadra23.com.br. Atualize este endereço e os canais de atendimento antes de publicar a loja.</p></details>
+      </div>
+    </section>
+    <section class="newsletter">
+      <span class="eyebrow">Papo reto, sem spam</span>
+      <h2>Novidades no seu radar.</h2>
+      <p>Cadastre seu e-mail para receber novidades da curadoria.</p>
+      <form class="newsletter-form" id="newsletterForm"><label class="visually-hidden" for="newsletterEmail">Seu e-mail</label><input id="newsletterEmail" type="email" placeholder="Seu melhor e-mail" required><button class="button" type="submit">Quero receber</button></form>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-main">
+      <div class="footer-brand"><a class="brand" href="#inicio"><span class="brand-mark">Q</span>QUADRA 23</a><p>Uma curadoria independente para quem vive sneaker culture. Encontre seu próximo clássico.</p></div>
+      <div class="footer-col"><h3>Explorar</h3><a href="#colecao">Coleção</a><a href="#categorias">Modelos</a><a href="#novidades">Novidades</a></div>
+      <div class="footer-col"><h3>Atendimento</h3><a href="#faq">Perguntas frequentes</a><a href="#faq">Envio e entrega</a><a href="#faq">Trocas e devoluções</a></div>
+      <div class="footer-col"><h3>Fale com a gente</h3><a href="mailto:contato@quadra23.com.br">E-mail</a><a href="#inicio">Instagram ↗</a><a href="#inicio">Acompanhar pedido</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 QUADRA 23 · Vitrine demonstrativa</span><span class="disclaimer">Jordan e outros nomes de marcas são propriedade de seus respectivos titulares. Loja independente, sem afiliação declarada. Imagens ilustrativas; confirme os direitos de uso e os dados antes de publicar.</span></div>
+  </footer>
+  <div class="overlay" id="overlay" aria-hidden="true"></div>
+  <aside class="drawer" id="cartDrawer" aria-label="Sacola de compras" aria-hidden="true">
+    <div class="drawer-header"><h2>Sua sacola <span id="cartTitleCount">(0)</span></h2><button class="icon-button close-panel" aria-label="Fechar sacola"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 5 14 14M19 5 5 19"/></svg></button></div>
+    <div class="drawer-body" id="cartItems"></div>
+    <div class="drawer-footer">
+      <form class="freight-form" id="freightForm"><label class="visually-hidden" for="postalCode">CEP para simulação</label><input id="postalCode" inputmode="numeric" maxlength="9" placeholder="CEP para simulação"><button type="submit">Calcular</button></form>
+      <p class="freight-result" id="freightResult">Frete demonstrativo, sujeito à confirmação pela loja.</p>
+      <div class="total-row"><span>Subtotal</span><span id="cartSubtotal">R$ 0,00</span></div>
+      <button class="button" id="checkoutButton">Continuar para checkout <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></button>
+      <p class="drawer-note">Demonstração: nenhum pedido ou pagamento será processado.</p>
+    </div>
+  </aside>
+  <div class="modal-wrap" id="productModal" role="dialog" aria-modal="true" aria-label="Detalhes do produto"></div>
+  <div class="modal-wrap" id="checkoutModal" role="dialog" aria-modal="true" aria-label="Checkout demonstrativo"></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="script.js" defer></script>
+</body>
+</html>
